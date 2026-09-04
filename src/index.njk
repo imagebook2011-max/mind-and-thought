@@ -1,30 +1,24 @@
 ---
-layout: layout.njk
-title: 마음과 사유
+layout: false
+title: 질문&질문
 ---
-<section class="hero">
-  <p class="hero-kicker">상담자와 내담자를 위한 철학·심리 아카이브</p>
-  <h1 class="hero-title">기술은 빨라지는데,<br>마음은 자꾸 뒤처집니다.</h1>
-  <p class="hero-lede">
-    AI가 하루가 다르게 바뀌는 동안, 우리는 정체성과 관계, 일의 의미를 다시 묻고 있습니다.
-    이곳은 그 물음 앞에 선 상담자와 내담자 모두를 위해, 철학과 심리학의 오래된 통찰을
-    지금의 언어로 옮겨두는 공간입니다.
-  </p>
-</section>
-
-<section class="post-list">
-  <h2 class="section-label">글</h2>
-  <ol class="posts">
-    {% for post in collections.posts %}
-    <li class="post-row">
-      <a href="{{ post.url }}">
-        <span class="post-date">{{ post.date | koreanDate }}</span>
-        <span class="post-heading">
-          <span class="post-title">{{ post.data.title }}</span>
-          <span class="post-excerpt">{{ post.data.excerpt }}</span>
-        </span>
-      </a>
-    </li>
-    {% endfor %}
-  </ol>
-</section>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>질문&질문</title>
+  <meta name="description" content="상담자와 내담자를 위해, 철학과 심리학으로 오늘의 마음을 살피는 공간">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="splash-body">
+  <main class="splash">
+    <p class="splash-eyebrow">상담자와 내담자를 위한 철학·심리 아카이브</p>
+    <h1 class="splash-title">질문&질문</h1>
+    <p class="splash-tagline">AI 시대, 철학과 심리로 오늘의 마음을 살핍니다.</p>
+    <a class="splash-cta" href="/articles/">글 보러가기 →</a>
+  </main>
+</body>
+</html>
