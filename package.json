@@ -1,0 +1,12 @@
+{
+  "name": "mind-and-thought",
+  "version": "1.0.0",
+  "description": "AI 시대, 철학과 심리로 마음을 돌보는 사람들을 위한 사이트",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

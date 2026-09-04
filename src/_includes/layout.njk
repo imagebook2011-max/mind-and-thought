@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "마음과 사유" }}</title>
+  <meta name="description" content="{{ description or '상담자와 내담자를 위해, 철학과 심리학으로 오늘의 마음을 살피는 공간' }}">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="spine"></div>
+  <header class="site-header">
+    <a class="site-title" href="/">마음과 사유</a>
+    <nav class="site-nav">
+      <a href="/">글</a>
+      <a href="/about/">소개</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p>마음과 사유 — 상담자와 내담자를 위한 철학·심리 아카이브</p>
+  </footer>
+</body>
+</html>

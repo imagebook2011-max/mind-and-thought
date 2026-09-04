@@ -1,0 +1,285 @@
+:root {
+  --paper: #f1eee5;
+  --paper-warm: #ece7d9;
+  --ink: #23241f;
+  --ink-soft: #52534a;
+  --sage: #5b6c5d;
+  --wine: #7a4b4b;
+  --rule: #d8d2c2;
+  --serif: "Noto Serif KR", serif;
+  --sans: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+/* 왼쪽 책등(spine) 장식 — 저널/제본 느낌의 유일한 장식 요소 */
+.spine {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--sage) 0%, var(--wine) 100%);
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .spine {
+    width: 4px;
+  }
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem 2rem;
+}
+
+.site-title {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: var(--ink);
+  border-color: var(--sage);
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem 6rem 2rem;
+}
+
+/* 히어로 */
+.hero {
+  padding: 2rem 0 3.5rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+
+.hero-kicker {
+  font-size: 0.9rem;
+  color: var(--sage);
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  max-width: 14ch;
+}
+
+.hero-lede {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* 글 목록 */
+.section-label {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem;
+}
+
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-row {
+  border-top: 1px solid var(--rule);
+}
+
+.post-row:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-row a {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+  text-decoration: none;
+  padding: 1.4rem 0;
+  transition: padding-left 0.15s ease;
+}
+
+.post-row a:hover {
+  padding-left: 0.4rem;
+}
+
+.post-date {
+  flex: none;
+  width: 5.5rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.2rem;
+}
+
+.post-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.post-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.post-excerpt {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+  .post-row a {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .post-date {
+    width: auto;
+  }
+}
+
+/* 개별 글 */
+.post {
+  padding-top: 1rem;
+}
+
+.post-back {
+  margin: 0 0 2rem;
+}
+
+.post-back a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.post-back a:hover {
+  color: var(--sage);
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--sage);
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.post-title-full {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0 0 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-body {
+  font-size: 1.05rem;
+  max-width: 65ch;
+}
+
+.post-body p {
+  margin: 0 0 1.4rem;
+}
+
+.post-body h2 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  margin: 2.5rem 0 1rem;
+}
+
+.post-body ul {
+  padding-left: 1.3rem;
+  margin: 0 0 1.4rem;
+}
+
+.post-body li {
+  margin-bottom: 0.5rem;
+}
+
+.post-body strong {
+  color: var(--wine);
+}
+
+/* 소개 페이지 */
+.about-title {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  margin: 1rem 0 2rem;
+}
+
+.about p {
+  font-size: 1.05rem;
+  max-width: 62ch;
+  color: var(--ink-soft);
+  margin: 0 0 1.3rem;
+}
+
+/* 푸터 */
+.site-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
